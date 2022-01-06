@@ -104,7 +104,7 @@ int main(int argc, const char * argv[]) {
 
     const char *filename = argv[1];
 
-    file = pcap_open_offline(filename, errbuf);
+    file = pcap_open_offline(filename, errbuf); //開啟並讀取檔案
     pcap_loop(file, -1, pcap_callback, NULL);
 
     pcap_close(file);
